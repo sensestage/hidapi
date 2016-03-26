@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 2.8)
-cmake_policy(SET CMP0048 OLD)
+
+if(${CMAKE_MAJOR_VERSION} GREATER 2)
+  cmake_policy(SET CMP0048 OLD)
+endif(${CMAKE_MAJOR_VERSION} GREATER 2)
+
 project(hidapi)
 
 set(VERSION_MAJOR "0")
